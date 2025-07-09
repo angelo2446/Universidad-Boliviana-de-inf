@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel del Estudiante - Universidad Boliviana de Informática</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <img src="escudo.png" alt="Escudo de la Universidad" />
+    <h1>Universidad Boliviana de Informática</h1>
+    <h2>Panel del Estudiante</h2>
+    <section>
+    <h3>Bienvenido, Gabriel Natanael</h3>
+    <p><strong>Semestre:</strong> 1</p>
+    <p>Aquí podrás ver tus datos personales, materias inscritas y tus notas.</p>
+  </section>
+    <section class="datos-personales">
+  <h3>Datos Personales</h3>
+  <ul>
+    <li><strong>Nombre:</strong> SOLIZ ZARATE GABRIEL NATANAEL</li>
+    <li><strong>Código Estudiantil:</strong> SZG20030414</li>
+    <li><strong>Carrera:</strong> INGENIERIA EN SISTEMAS</li>
+    <li><strong>Correo:</strong> natanielzarate478@gmmail.com</li>
+  </ul>
+</section>
+
+  </header>
+
+  
+  <section class="materias-notas">
+  <h3>Materias y Notas</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Materia</th>
+        <th>Nota 1ra Etapa</th>
+        <th>Nota 2da Etapa</th>
+        <th>Nota Final</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fisica Aplicada I</td>
+        <td>15</td>
+        <td>20</td>
+        <td></td>
+        <td>Tercera Etapa</td>
+      </tr>
+      <tr>
+        <td>Algebra</td>
+        <td>20</td>
+        <td>25</td>
+        <td></td>
+        <td>Tercera Etapa</td>
+      </tr>
+      <tr>
+        <td>Logica</td>
+        <td>25</td>
+        <td>20</td>
+        <td></td>
+        <td>Tercera Etapa</td>
+      </tr>
+        <tr>
+        <td>Programacion 1</td>
+        <td>20</td>
+        <td>18</td>
+        <td></td>
+        <td>Tercera Etapa</td>
+      </tr>
+        <tr>
+        <td>Metologia y Tecnicas de Estudio</td>
+        <td>25</td>
+        <td>21</td>
+        <td></td>
+        <td>Tercera Etapa</td>
+      </tr>
+        <tr>
+        <td>Tecnologia</td>
+        <td>20</td>
+        <td>25</td>
+        <td></td>
+        <td>Tercera Etapa</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+<div style="margin-top: 30px; text-align: center;">
+  <a href="index.html">
+    <button style="padding: 10px 20px; background-color: #cc0000; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Cerrar Sesión
+    </button>
+  </a>
+</div>
+<script>
+  const usuario = sessionStorage.getItem('usuario');
+  const nombreUsuarioSpan = document.getElementById('nombre-usuario');
+
+  if (usuario) {
+    nombreUsuarioSpan.textContent = usuario;
+  } else {
+    // Si no hay usuario en sesión, redirigir al login
+    window.location.href = 'index.html';
+  }
+</script>
+</body>
+</html>
